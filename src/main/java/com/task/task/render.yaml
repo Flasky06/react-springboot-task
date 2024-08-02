@@ -1,0 +1,37 @@
+# render.yaml
+services:
+  - type: web
+    name: springboot-backend
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    branch: main
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-cqmb0j3qf0us73a8vuh0-a.singapore-postgres.render.com/database_ftf1
+      - key: SPRING_DATASOURCE_USERNAME
+        value: database_ftf1_user
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: XfU5Fev1hgHUli6Jn0Nzilnnny2ml3cP
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
+      - key: SPRING_JPA_SHOW_SQL
+        value: true
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
+        value: true
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_DATABASE
+        value: postgresql
+      - key: SPRING_JPA_PROPERTIES_HIBERNATE_DATABASE_PLATFORM
+        value: org.hibernate.dialect.PostgreSQLDialect
+      - key: LOGGING_LEVEL_ORG_HIBERNATE_SQL
+        value: DEBUG
+      - key: LOGGING_LEVEL_ORG_HIBERNATE_TYPE_DESCRIPTOR_SQL_BASICBINDER
+        value: TRACE
+
+databases:
+  - type: postgresql
+    name: react-springboot-db
+    plan: free
+    region: singapore
+    version: 16
