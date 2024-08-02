@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/task_project
-    username: postgres
-    password: bony
+    url: jdbc:postgresql://dpg-cqmb0j3qf0us73a8vuh0-a.singapore-postgres.render.com/database_ftf1
+    username: database_ftf1_user
+    password: XfU5Fev1hgHUli6Jn0Nzilnnny2ml3cP
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
