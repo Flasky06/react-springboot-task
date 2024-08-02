@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/persons")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*") // Allow all origins
 public class PersonController {
     @Autowired
     private PersonService personService;
