@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/persons")
-@CrossOrigin(origins = "https://springboot-task-frontend.vercel.app")
+@CrossOrigin(origins = "*")
 public class PersonController {
 
     @Autowired
